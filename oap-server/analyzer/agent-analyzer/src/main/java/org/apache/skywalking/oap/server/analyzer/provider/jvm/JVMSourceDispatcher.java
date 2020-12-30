@@ -175,7 +175,7 @@ public class JVMSourceDispatcher {
             serviceInstanceJVMMemoryPool.setUsed(memoryPool.getUsed());
             serviceInstanceJVMMemoryPool.setCommitted(memoryPool.getCommitted());
             serviceInstanceJVMMemoryPool.setTimeBucket(timeBucket);
-			serviceInstanceJVMMemoryPool.setRatio(memoryPool.getUsed() * 100 / memoryPool.getMax());
+            serviceInstanceJVMMemoryPool.setRatio(memoryPool.getUsed() * 100 / memoryPool.getMax());
             sourceReceiver.receive(serviceInstanceJVMMemoryPool);
         });
     }
