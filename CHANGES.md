@@ -39,6 +39,7 @@ Release Notes.
 * Fix searchService method error in storage-influxdb-plugin.
 * Add JavaScript component ID.
 * Fix CVE of UninstrumentedGateways in Dynamic Configuration activation.
+* Adding the JVMMemoryPool usage ratio metric for the convenience of tuning JVM Memory for Large-scale Services and analyzing memory leak problems.
 
 #### UI
 * Fix un-removed tags in trace query.
