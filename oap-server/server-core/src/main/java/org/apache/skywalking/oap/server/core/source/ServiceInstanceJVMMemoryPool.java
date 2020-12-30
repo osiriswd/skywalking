@@ -67,4 +67,7 @@ public class ServiceInstanceJVMMemoryPool extends Source {
     @Getter
     @Setter
     private long committed;
+    @Getter
+    @Setter
+    private long ratio;
 }
