@@ -39,7 +39,12 @@ Release Notes.
 * Fix searchService method error in storage-influxdb-plugin.
 * Add JavaScript component ID.
 * Fix CVE of UninstrumentedGateways in Dynamic Configuration activation.
-* Adding the JVMMemoryPool usage ratio metric for the convenience of tuning JVM Memory for Large-scale Services and analyzing memory leak problems.
+* Improve query performance in storage-influxdb-plugin.
+* Fix the uuid field in GRPCConfigWatcherRegister is not updated.
+* Support Envoy {AccessLog,Metrics}Service API V3.
+* Adopt the [MAL](docs/en/concepts-and-designs/mal.md) in Envoy metrics service analyzer.
+* Fix the priority setting doesn't work of the ALS analyzers.
+* Fix bug that `endpoint-name-grouping.yml` is not customizable in Dockerized case.
 
 #### UI
 * Fix un-removed tags in trace query.
