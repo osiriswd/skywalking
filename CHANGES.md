@@ -45,6 +45,7 @@ Release Notes.
 * Adopt the [MAL](docs/en/concepts-and-designs/mal.md) in Envoy metrics service analyzer.
 * Fix the priority setting doesn't work of the ALS analyzers.
 * Fix bug that `endpoint-name-grouping.yml` is not customizable in Dockerized case.
+* Adding the JVMMemoryPool usage ratio metric for the convenience of tuning JVM Memory for Large-scale Services and analyzing memory leak problems.
 
 #### UI
 * Fix un-removed tags in trace query.
