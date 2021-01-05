@@ -29,13 +29,5 @@ instance_jvm_old_gc_count = from(ServiceInstanceJVMGC.count).filter(phrase == GC
 instance_jvm_thread_live_count = from(ServiceInstanceJVMThread.liveCount).longAvg();
 instance_jvm_thread_daemon_count = from(ServiceInstanceJVMThread.daemonCount).longAvg();
 instance_jvm_thread_peak_count = from(ServiceInstanceJVMThread.peakCount).longAvg();
-instance_jvm_new_usage = from(ServiceInstanceJVMMemoryPool.used).filter(poolType == MemoryPoolType.NEWGEN_USAGE).longAvg();
-instance_jvm_new_max = from(ServiceInstanceJVMMemoryPool.max).filter(poolType == MemoryPoolType.NEWGEN_USAGE).longAvg();
-instance_jvm_old_usage = from(ServiceInstanceJVMMemoryPool.used).filter(poolType == MemoryPoolType.OLDGEN_USAGE).longAvg();
-instance_jvm_old_max = from(ServiceInstanceJVMMemoryPool.max).filter(poolType == MemoryPoolType.OLDGEN_USAGE).longAvg();
-instance_jvm_meta_usage = from(ServiceInstanceJVMMemoryPool.used).filter(poolType == MemoryPoolType.METASPACE_USAGE).longAvg();
-instance_jvm_meta_max = from(ServiceInstanceJVMMemoryPool.max).filter(poolType == MemoryPoolType.METASPACE_USAGE).longAvg();
-instance_jvm_survivor_usage = from(ServiceInstanceJVMMemoryPool.used).filter(poolType == MemoryPoolType.SURVIVOR_USAGE).longAvg();
-instance_jvm_survivor_max = from(ServiceInstanceJVMMemoryPool.max).filter(poolType == MemoryPoolType.SURVIVOR_USAGE).longAvg();
 instance_jvm_meta_ratio = from(ServiceInstanceJVMMemoryPool.ratio).filter(poolType == MemoryPoolType.METASPACE_USAGE).longAvg();
 instance_jvm_old_ratio = from(ServiceInstanceJVMMemoryPool.ratio).filter(poolType == MemoryPoolType.OLDGEN_USAGE).longAvg();
