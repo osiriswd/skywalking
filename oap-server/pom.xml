@@ -21,7 +21,7 @@
     <parent>
         <artifactId>apm</artifactId>
         <groupId>org.apache.skywalking</groupId>
-        <version>8.4.0-SNAPSHOT</version>
+        <version>8.5.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -68,7 +68,7 @@
         <commons-io.version>2.6</commons-io.version>
         <elasticsearch.version>6.3.2</elasticsearch.version>
         <joda-time.version>2.10.5</joda-time.version>
-        <kubernetes.version>8.0.0</kubernetes.version>
+        <kubernetes.version>10.0.0</kubernetes.version>
         <hikaricp.version>3.1.0</hikaricp.version>
         <zipkin.version>2.9.1</zipkin.version>
         <caffeine.version>2.6.2</caffeine.version>
@@ -101,6 +101,7 @@
         <spring-kafka-test.version>2.4.6.RELEASE</spring-kafka-test.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <flatbuffers-java.version>1.12.0</flatbuffers-java.version>
+        <postgresql.version>42.2.18</postgresql.version>
     </properties>
 
     <dependencies>
@@ -560,6 +561,12 @@
                 <groupId>com.google.flatbuffers</groupId>
                 <artifactId>flatbuffers-java</artifactId>
                 <version>${flatbuffers-java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -2,28 +2,22 @@ Changes by Version
 ==================
 Release Notes.
 
-8.4.0
+8.5.0
 ------------------
 #### Project
-* Incompatible with previous releases when use H2/MySQL/TiDB storage options, due to support multiple alarm rules triggered for one entity.
-* Chore: adapt `create_source_release.sh` to make it runnable on Linux.
-* Add `package` to `.proto` files, prevent polluting top-level namespace in some languages; The OAP server supports previous agent releases, whereas the previous OAP server (<=8.3.0) won't recognize newer agents since this version (>= 8.4.0).
+* Update frontend-maven-plugin to 1.11.0, for Download node x64 binary on Apple Silicon.
+* Add E2E test for VM monitoring that metrics from Prometheus node-exporter.
 
 #### Java Agent
-* The operation name of quartz-scheduler plugin, has been changed as the `quartz-scheduler/${className}` format.
-* Fix jdk-http and okhttp-3.x plugin did not overwrite the old trace header.
-* Add interceptors of method(analyze, searchScroll, clearScroll, searchTemplate and deleteByQuery) for elasticsearch-6.x-plugin.
-* Support collecting logs of log4j, log4j2, and logback in the tracing context with a new `logger-plugin`.
-* Fix the unexpected RunningContext recreation in the Tomcat plugin.
-* Fix the potential NPE when trace_sql_parameters is enabled.
-* Update `byte-buddy` to 1.10.19.
-* Fix thrift plugin trace link broken when intermediate service does not mount agent
-* Fix thrift plugin collects wrong args when the method without parameter.
-* Fix DataCarrier's `org.apache.skywalking.apm.commons.datacarrier.buffer.Buffer` implementation isn't activated in `IF_POSSIBLE` mode.
-* Fix ArrayBlockingQueueBuffer's useless `IF_POSSIBLE` mode list
-* Support building gRPC TLS channel but CA file is not required.
+* Remove invalid mysql configuration in agent.config.
+* Add net.bytebuddy.agent.builder.AgentBuilder.RedefinitionStrategy.Listener to show detail message when redefine errors occur.
+* Fix ClassCastException of log4j gRPC reporter.
+* Fix NPE when Kafka reporter activated.
+* Enhance gRPC log appender to allow layout pattern.
+* Fix apm-dubbo-2.7.x-plugin memory leak due to some Dubbo RpcExceptions.
 
 #### OAP-Backend
+<<<<<<< HEAD
 * Make meter receiver support MAL.
 * Support influxDB connection response format option. Fix some error when use JSON as influxDB response format.
 * Support Kafka MirrorMaker 2.0 to replicate topics between Kafka clusters.
@@ -46,32 +40,29 @@ Release Notes.
 * Fix the priority setting doesn't work of the ALS analyzers.
 * Fix bug that `endpoint-name-grouping.yml` is not customizable in Dockerized case.
 * Adding the JVMMemoryPool usage ratio metric for the convenience of tuning JVM Memory for Large-scale Services and analyzing memory leak problems.
+=======
+* Allow user-defined `JAVA_OPTS` in the startup script.
+* Metrics combination API supports abandoning results.
+* Add a new concept "Event" and its implementations to collect events.
+* Add some defensive codes for NPE and bump up Kubernetes client version to expose exception stack trace.
+* Update the `timestamp` field type for `LogQuery`.
+* Support Zabbix protocol to receive agent metrics.
+* Update the Apdex metric combine calculator.
+* Enhance `MeterSystem` to allow creating metrics with same `metricName` / `function` / `scope`.
+* Storage plugin supports postgresql.
+* Fix kubernetes.client.opeanapi.ApiException.
+* Remove filename suffix in the meter active file config.
+* Introduce log analysis language (LAL).
+>>>>>>> 665a07cb0f97316c6c98425d1a0fcf363214483e
 
 #### UI
-* Fix un-removed tags in trace query.
-* Fix unexpected metrics name on single value component.
-* Don't allow negative value as the refresh period.
-* Fix style issue in trace table view.
-* Separation Log and Dashboard selector data to avoid conflicts.
-* Fix trace instance selector bug.
-* Fix Unnecessary sidebar in tooltips for charts.
-* Refactor dashboard query in a common script.
-* Implement refreshing data for topology by updating date.
-* Implement group selector in the topology.
-* Fix all as default parameter for services selector.
-* Add icon for Python aiohttp plugin.
-* Add icon for Python pyramid plugin.
-* Fix topology render all services nodes when groups changed.
-* Fix rk-footer utc input's width.
-* Update rk-icon and rewrite rk-header svg tags with rk-icon.
+* Update selector scroller to show in all pages.
+* Implement searching logs with date.
 
 #### Documentation
-* Update the documents of backend fetcher and self observability about the latest configurations.
-* Add documents about the group name of service.
-* Update docs about the latest UI.
-* Update the document of backend trace sampling with the latest configuration.
 
-All issues and pull requests are [here](https://github.com/apache/skywalking/milestone/68?closed=1)
+
+All issues and pull requests are [here](https://github.com/apache/skywalking/milestone/76?closed=1)
 
 ------------------
 Find change logs of all versions [here](changes).

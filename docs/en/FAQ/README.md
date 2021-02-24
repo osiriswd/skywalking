@@ -8,6 +8,7 @@ These are known and common FAQs. We welcome you to contribute yours.
 * [Protoc plugin fails in maven build](Protoc-Plugin-Fails-When-Build.md)
 * [Required items could not be found, when import project into Eclipse](Import-Project-Eclipse-RequireItems-Exception.md)
 * [Maven compilation failure with `python2 not found` error](maven-compile-npm-failure.md)
+* [Fix compiling on Mac M1 chip](How-to-build-with-mac-m1.md)
 
 ## Runtime
 * [8.x+ upgrade](v8-version-upgrade.md)
